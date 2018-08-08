@@ -1,23 +1,24 @@
 function getFirstSelector(selector){
-  
-  return document.querySelector(selectr)
-}
+return document.querySelector(selector)}
+
 function nestedTarget(){
-  
-  return document.querySelector('#nested .target')
-}
- function increaseRankBy(n){
-let ranking= document.querySelectorAll('.ranked-list li')
- for(let i=0;i<ranking.length;i++){
-   ranking[i].innerHTML = parseInt(ranking[i].innerHTML)+n
-   
- }
- }
-  function deepestChild(){
-    let grand = document.querySelector('div#grand-node')
-    let deepest = deepest.children[0]
-    for(let i=0 ; !deepest.children[i];i){
-      deepest = deepest.children[0]
-      return deepest;
+return document.querySelector('#nested .target')}
+
+
+function increaseRankBy(n) {
+    let ranked = document.querySelectorAll('.ranked-list')
+    for (let i = 0, l = ranked.length; i < l; i++) {
+
+        let child = ranked[i].children
+
+        for (let o = 0, p = child.length; o < p; o++) {
+            child[o].innerHTML = parseInt(child[o].innerHTML) + n
+        }
     }
-  }
+}
+
+
+function deepestChild() {
+    let grand = document.querySelectorAll('#grand-node div');
+    let deepest = grand[grand.length-1];
+    return deepest;}
